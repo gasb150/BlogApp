@@ -1,0 +1,94 @@
+Started GET "/" for ::1 at 2021-01-15 10:02:45 -0600
+  [1m[35m (6.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/mily/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/mily/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 49.1ms | Allocations: 522)
+Completed 200 OK in 114ms (Views: 70.4ms | ActiveRecord: 0.0ms | Allocations: 4180)
+
+
+Started GET "/" for ::1 at 2021-01-15 10:12:41 -0600
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/mily/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/mily/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 13.0ms | Allocations: 419)
+Completed 200 OK in 34ms (Views: 18.4ms | ActiveRecord: 0.0ms | Allocations: 3090)
+
+
+Started GET "/" for ::1 at 2021-01-15 10:13:47 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/mily/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/mily/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 19.0ms | Allocations: 223)
+Completed 200 OK in 39ms (Views: 30.7ms | ActiveRecord: 0.0ms | Allocations: 957)
+
+
+Started GET "/articles" for 127.0.0.1 at 2021-01-15 10:14:51 -0600
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 111)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/mily/Desktop/Microverse-Projects/RoR Module/blog_app/BlogApp/blog/public/packs
+[Webpacker] Hash: 415a948d492e21802f43
+Version: webpack 4.46.0
+Time: 7855ms
+Built at: 01/15/2021 10:15:06 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-d5a3c3b4dce84b5eb605.js    125 KiB  application  [emitted] [immutable]  application
+js/application-d5a3c3b4dce84b5eb605.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-d5a3c3b4dce84b5eb605.js js/application-d5a3c3b4dce84b5eb605.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 14253.2ms | Allocations: 14727)
+Completed 200 OK in 14749ms (Views: 14745.8ms | ActiveRecord: 0.0ms | Allocations: 15948)
+
+
+Started GET "/" for 127.0.0.1 at 2021-01-15 10:18:59 -0600
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 43)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 67.1ms | Allocations: 3083)
+Completed 200 OK in 89ms (Views: 69.8ms | Allocations: 4207)
+
+
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (962.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (152.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArticles (20210115162234)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "articles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (6.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210115162234"]]
+  [1m[36mTRANSACTION (105.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-15 16:28:55.794581"], ["updated_at", "2021-01-15 16:28:55.794581"]]
+  [1m[36mTRANSACTION (76.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArticle Create (0.8ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Hello Rails"], ["body", "I am on Rails!"], ["created_at", "2021-01-15 16:30:48.559698"], ["updated_at", "2021-01-15 16:30:48.559698"]]
+  [1m[36mTRANSACTION (705.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2021-01-15 10:39:58 -0600
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 33.8ms | Allocations: 4205)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 70.5ms | Allocations: 9861)
+Completed 200 OK in 110ms (Views: 77.4ms | ActiveRecord: 3.0ms | Allocations: 13479)
+
+
